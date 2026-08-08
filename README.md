@@ -1,4 +1,4 @@
-# NeonQuiz — Sistema de Quizzes Futurista
+# XaviQuiz — Sistema de Quizzes Futurista
 
 Aplicação web estática de quizzes pronta para ser hospedada no **GitHub Pages**.
 
