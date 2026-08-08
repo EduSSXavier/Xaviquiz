@@ -1,6 +1,13 @@
 {
   "quizzes": [
     {
+      "id": "algoritmos-pseudocodigo",
+      "title": "Introdução a Algoritmos e Pseudocódigo",
+      "file": "algoritmos-pseudocodigo.json",
+      "icon": "🧮",
+      "difficulty": "Iniciante"
+    },
+    {
       "id": "javascript-fundamentals",
       "title": "Fundamentos de JavaScript",
       "description": "Teste seus conhecimentos básicos sobre variáveis, tipos, funções e estruturas de controle em JavaScript.",
