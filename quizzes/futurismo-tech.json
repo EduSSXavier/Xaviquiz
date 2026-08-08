@@ -1,0 +1,71 @@
+{
+  "title": "Tecnologia & Futuro",
+  "description": "Perguntas sobre IA, computação quântica, blockchain e tendências tecnológicas.",
+  "questions": [
+    {
+      "question": "O que significa a sigla LLM no contexto de Inteligência Artificial?",
+      "options": [
+        "Large Language Model",
+        "Low Latency Machine",
+        "Logical Learning Module",
+        "Linear Layer Matrix"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Qual empresa lançou o modelo GPT-4?",
+      "options": ["Google", "Meta", "OpenAI", "Anthropic"],
+      "correct": 2
+    },
+    {
+      "question": "O que é um qubit na computação quântica?",
+      "options": [
+        "Unidade básica de informação clássica",
+        "Unidade básica de informação quântica",
+        "Tipo de processador gráfico",
+        "Protocolo de rede"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual tecnologia é a base do Bitcoin?",
+      "options": ["Inteligência Artificial", "Blockchain", "Computação Quântica", "5G"],
+      "correct": 1
+    },
+    {
+      "question": "O que significa AGI?",
+      "options": [
+        "Artificial General Intelligence",
+        "Advanced Graphics Interface",
+        "Automated Grid Infrastructure",
+        "Adaptive Genetic Intelligence"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Qual fenômeno quântico permite que um qubit esteja em múltiplos estados simultaneamente?",
+      "options": ["Emaranhamento", "Superposição", "Tunelamento", "Decoerência"],
+      "correct": 1
+    },
+    {
+      "question": "Qual é uma das principais preocupações éticas relacionadas à IA generativa?",
+      "options": [
+        "Consumo excessivo de energia",
+        "Geração de deepfakes e desinformação",
+        "Velocidade de processamento",
+        "Tamanho dos modelos"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que é um 'smart contract'?",
+      "options": [
+        "Contrato jurídico digital assinado com certificado",
+        "Programa autoexecutável em blockchain",
+        "IA que negocia contratos",
+        "Protocolo de comunicação segura"
+      ],
+      "correct": 1
+    }
+  ]
+}

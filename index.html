@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Sistema de Quizzes Futurista — Teste seus conhecimentos em tecnologia" />
+  <meta name="theme-color" content="#0a0a12" />
+  <title>NeonQuiz | Sistema de Quizzes Futurista</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+  <div id="app">
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="logo">NEONQUIZ</h1>
+      <p class="tagline">Sistema de Avaliação Interativo</p>
+    </header>
+
+    <!-- HOME SCREEN -->
+    <section id="home-screen" class="screen active">
+      <h2 class="section-title">Escolha um Quiz</h2>
+      <div id="quiz-list" class="quiz-grid">
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Carregando quizzes...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section id="quiz-screen" class="screen">
+      <div class="quiz-header">
+        <h2 id="quiz-title" class="quiz-title"></h2>
+        <div class="progress-container">
+          <div class="progress-info">
+            <span id="progress-text">Pergunta 1 de 8</span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div id="question-number" class="question-number">Pergunta 01</div>
+        <p id="question-text" class="question-text"></p>
+        <div id="options-list" class="options-list"></div>
+      </div>
+
+      <div class="quiz-actions">
+        <button id="btn-prev" class="btn btn-ghost" disabled>← Anterior</button>
+        <button id="btn-next" class="btn btn-primary" disabled>Próxima →</button>
+      </div>
+    </section>
+
+    <!-- RESULTS SCREEN -->
+    <section id="results-screen" class="screen">
+      <div class="results-card">
+        <span id="results-icon" class="results-icon">🏆</span>
+        <h2 id="results-title" class="results-title">Quiz Concluído!</h2>
+        <div id="results-score" class="results-score">0%</div>
+        <p id="results-message" class="results-message"></p>
+
+        <div class="results-stats">
+          <div class="stat-box">
+            <span id="stat-correct" class="stat-value correct">0</span>
+            <span class="stat-label">Acertos</span>
+          </div>
+          <div class="stat-box">
+            <span id="stat-incorrect" class="stat-value incorrect">0</span>
+            <span class="stat-label">Erros</span>
+          </div>
+        </div>
+
+        <div class="results-actions">
+          <button id="btn-retry" class="btn btn-primary">↻ Refazer Quiz</button>
+          <button id="btn-home" class="btn btn-secondary">← Voltar ao Início</button>
+        </div>
+      </div>
+
+      <div id="review-section" class="review-section" style="display: none;">
+        <h2 class="section-title">Revisão dos Erros</h2>
+        <div id="review-list"></div>
+      </div>
+    </section>
+
+    <!-- ERROR SCREEN -->
+    <section id="error-screen" class="screen">
+      <div class="error-state">
+        <h2>Erro ao carregar</h2>
+        <p id="error-message">Não foi possível carregar o quiz solicitado.</p>
+        <button id="btn-error-home" class="btn btn-primary">Voltar ao Início</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>NeonQuiz · Feito para GitHub Pages · <span id="year"></span></p>
+    </footer>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

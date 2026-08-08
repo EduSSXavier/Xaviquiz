@@ -1,0 +1,36 @@
+{
+  "quizzes": [
+    {
+      "id": "javascript-fundamentals",
+      "title": "Fundamentos de JavaScript",
+      "description": "Teste seus conhecimentos básicos sobre variáveis, tipos, funções e estruturas de controle em JavaScript.",
+      "file": "javascript-fundamentals.json",
+      "icon": "⚡",
+      "difficulty": "Iniciante"
+    },
+    {
+      "id": "html-css",
+      "title": "HTML & CSS Essentials",
+      "description": "Perguntas sobre estrutura HTML, seletores CSS, flexbox, grid e responsividade.",
+      "file": "html-css.json",
+      "icon": "🎨",
+      "difficulty": "Iniciante"
+    },
+    {
+      "id": "web-security",
+      "title": "Segurança Web Básica",
+      "description": "Conceitos fundamentais de XSS, CSRF, HTTPS, autenticação e boas práticas de segurança.",
+      "file": "web-security.json",
+      "icon": "🔒",
+      "difficulty": "Intermediário"
+    },
+    {
+      "id": "futurismo-tech",
+      "title": "Tecnologia & Futuro",
+      "description": "Perguntas sobre IA, computação quântica, blockchain e tendências tecnológicas.",
+      "file": "futurismo-tech.json",
+      "icon": "🚀",
+      "difficulty": "Intermediário"
+    }
+  ]
+}
