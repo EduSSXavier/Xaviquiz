@@ -1,0 +1,126 @@
+{
+  "title": "História, Arquiteturas e Impacto da Inteligência Artificial",
+  "description": "Marcos históricos da IA, invernos da inteligência artificial, principais modelos arquiteturais e a integração da IA no cotidiano humano. Nível intermediário.",
+  "questions": [
+    {
+      "question": "Em que ano e em qual evento foi cunhado formalmente o termo \"Inteligência Artificial\"?",
+      "options": [
+        "1950, no artigo de Alan Turing sobre a Máquina de Turing",
+        "1956, na Conferência de Dartmouth organizada por John McCarthy e outros",
+        "1969, com a publicação do livro de Marvin Minsky",
+        "1980, no auge dos sistemas especialistas"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que caracteriza um \"inverno da IA\" (AI Winter)?",
+      "options": [
+        "Período de intenso financiamento governamental em pesquisa de IA",
+        "Fase de estagnação com redução de investimentos e desilusão após expectativas exageradas",
+        "Momento em que a IA supera o desempenho humano em todos os benchmarks",
+        "Transição obrigatória de sistemas simbólicos para redes neurais"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Quais foram os dois principais invernos da IA historicamente reconhecidos?",
+      "options": [
+        "Anos 1950–1955 e 2010–2015",
+        "Final dos anos 1960 / início dos 1970 e final dos anos 1980 / início dos 1990",
+        "1985–1990 e 2000–2005",
+        "Apenas o período 1974–1980"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O Teste de Turing, proposto em 1950, avalia principalmente:",
+      "options": [
+        "A velocidade de processamento de um computador",
+        "A capacidade de uma máquina de exibir comportamento inteligível indistinguível do de um humano em conversação",
+        "A precisão de algoritmos de visão computacional",
+        "O consumo energético de modelos de aprendizado profundo"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual arquitetura de rede neural, popularizada a partir de 2017, se tornou a base da maioria dos grandes modelos de linguagem (LLMs)?",
+      "options": [
+        "Redes Neurais Recorrentes (RNN) clássicas",
+        "Máquinas de Boltzmann Restritas",
+        "Transformers (mecanismo de atenção)",
+        "Redes de Hopfield"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O que diferencia a abordagem simbólica (GOFAI) da abordagem conexionista na IA?",
+      "options": [
+        "A simbólica usa regras e lógica explícitas; a conexionista aprende padrões a partir de dados por meio de redes neurais",
+        "A simbólica só funciona com imagens; a conexionista só com texto",
+        "Não há diferença prática entre elas",
+        "A conexionista exige programação manual de todas as regras"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O sistema especialista MYCIN, desenvolvido na década de 1970, é um exemplo clássico de:",
+      "options": [
+        "Rede neural convolucional para diagnóstico médico",
+        "Sistema baseado em regras (simbólico) para auxiliar no diagnóstico de infecções bacterianas",
+        "Modelo generativo de linguagem natural",
+        "Algoritmo de reforço para jogos"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual avanço de 2012 é frequentemente citado como marco do renascimento do deep learning na visão computacional?",
+      "options": [
+        "A vitória do Deep Blue sobre Kasparov",
+        "A vitória da rede AlexNet no ImageNet com uso de GPUs e CNNs",
+        "O lançamento do GPT-3",
+        "A criação da linguagem Prolog"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "No contexto de modelos de IA, o que significa a sigla \"LLM\"?",
+      "options": [
+        "Linear Learning Machine",
+        "Large Language Model",
+        "Low-Latency Module",
+        "Logical Layer Matrix"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual das opções abaixo é um exemplo concreto de integração da IA no dia a dia das pessoas?",
+      "options": [
+        "Apenas robots industriais em fábricas isoladas",
+        "Assistentes de voz, recomendações em streaming, filtros de spam, navegação por GPS e diagnósticos auxiliados por imagem",
+        "Exclusivamente sistemas militares de alto sigilo",
+        "Somente pesquisas acadêmicas sem aplicação prática"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que é \"Aprendizado por Reforço\" (Reinforcement Learning)?",
+      "options": [
+        "Técnica em que o modelo recebe exemplos rotulados de entrada e saída",
+        "Abordagem em que um agente aprende a tomar decisões maximizando recompensas por meio de tentativa e erro no ambiente",
+        "Método exclusivo de compressão de modelos grandes",
+        "Técnica de rotulagem manual de datasets"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Por que o conceito de \"IA generativa\" ganhou destaque a partir da década de 2020 no cotidiano?",
+      "options": [
+        "Porque substituiu completamente todos os sistemas especialistas",
+        "Por permitir a criação de texto, imagens, áudio e código a partir de prompts em linguagem natural, tornando-se acessível ao público geral",
+        "Por ser a única forma de IA que não consome energia",
+        "Porque elimina a necessidade de dados de treinamento"
+      ],
+      "correct": 1
+    }
+  ]
+}
