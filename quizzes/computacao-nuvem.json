@@ -7,7 +7,7 @@
       "options": [
         "Microsoft, com o Azure",
         "Google, com o App Engine",
-        "Amazon, com o Amazon Web Services (AWS) / EC2 e S3",
+        "Amazon, com o Amazon Web Services (AWS)",
         "IBM, com o SoftLayer"
       ],
       "correct": 2
@@ -56,7 +56,7 @@
       "question": "Qual modelo de serviço de nuvem abstrai a infraestrutura e o sistema operacional, permitindo que o desenvolvedor foque no código da aplicação e em sua configuração?",
       "options": [
         "IaaS",
-        "PaaS (Platform as a Service)",
+        "PaaS",
         "SaaS",
         "FaaS exclusivamente"
       ],
