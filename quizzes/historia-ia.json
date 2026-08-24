@@ -16,11 +16,11 @@
       "question": "O que caracteriza um \"inverno da IA\" (AI Winter)?",
       "options": [
         "Período de intenso financiamento governamental em pesquisa de IA",
-        "Fase de estagnação com redução de investimentos e desilusão após expectativas exageradas",
         "Momento em que a IA supera o desempenho humano em todos os benchmarks",
-        "Transição obrigatória de sistemas simbólicos para redes neurais"
+        "Transição obrigatória de sistemas simbólicos para redes neurais",
+        "Fase de estagnação com redução de investimentos e desilusão após expectativas exageradas"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
       "question": "Quais foram os dois principais invernos da IA historicamente reconhecidos?",
@@ -36,11 +36,11 @@
       "question": "O Teste de Turing, proposto em 1950, avalia principalmente:",
       "options": [
         "A velocidade de processamento de um computador",
-        "A capacidade de uma máquina de exibir comportamento inteligível indistinguível do de um humano em conversação",
         "A precisão de algoritmos de visão computacional",
+        "A capacidade de uma máquina de exibir comportamento inteligível indistinguível do de um humano em conversação",
         "O consumo energético de modelos de aprendizado profundo"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
       "question": "Qual arquitetura de rede neural, popularizada a partir de 2017, se tornou a base da maioria dos grandes modelos de linguagem (LLMs)?",
@@ -86,11 +86,11 @@
       "question": "No contexto de modelos de IA, o que significa a sigla \"LLM\"?",
       "options": [
         "Linear Learning Machine",
-        "Large Language Model",
         "Low-Latency Module",
-        "Logical Layer Matrix"
+        "Logical Layer Matrix",
+        "Large Language Model"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
       "question": "Qual das opções abaixo é um exemplo concreto de integração da IA no dia a dia das pessoas?",
@@ -105,22 +105,22 @@
     {
       "question": "O que é \"Aprendizado por Reforço\" (Reinforcement Learning)?",
       "options": [
-        "Técnica em que o modelo recebe exemplos rotulados de entrada e saída",
         "Abordagem em que um agente aprende a tomar decisões maximizando recompensas por meio de tentativa e erro no ambiente",
+        "Técnica em que o modelo recebe exemplos rotulados de entrada e saída",
         "Método exclusivo de compressão de modelos grandes",
         "Técnica de rotulagem manual de datasets"
       ],
-      "correct": 1
+      "correct": 0
     },
     {
       "question": "Por que o conceito de \"IA generativa\" ganhou destaque a partir da década de 2020 no cotidiano?",
       "options": [
         "Porque substituiu completamente todos os sistemas especialistas",
-        "Por permitir a criação de texto, imagens, áudio e código a partir de prompts em linguagem natural, tornando-se acessível ao público geral",
         "Por ser a única forma de IA que não consome energia",
+        "Por permitir a criação de texto, imagens, áudio e código a partir de prompts em linguagem natural, tornando-se acessível ao público geral",
         "Porque elimina a necessidade de dados de treinamento"
       ],
-      "correct": 1
+      "correct": 2
     }
   ]
 }
