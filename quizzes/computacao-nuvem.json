@@ -1,0 +1,126 @@
+{
+  "title": "Computação em Nuvem: História e Modelos",
+  "description": "Principais marcos históricos da computação em nuvem e modelos de serviço e implantação. Nível intermediário.",
+  "questions": [
+    {
+      "question": "Qual empresa é amplamente reconhecida por ter lançado, em 2006, o serviço que popularizou a infraestrutura como serviço (IaaS) em escala comercial, marcando o início da era moderna da computação em nuvem?",
+      "options": [
+        "Microsoft, com o Azure",
+        "Google, com o App Engine",
+        "Amazon, com o Amazon Web Services (AWS) / EC2 e S3",
+        "IBM, com o SoftLayer"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Em que ano a Salesforce lançou sua plataforma de CRM baseada em nuvem, sendo frequentemente citada como um dos primeiros grandes exemplos comerciais de Software as a Service (SaaS)?",
+      "options": [
+        "1999",
+        "2006",
+        "2010",
+        "1989"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O documento do NIST (National Institute of Standards and Technology) de 2011 é importante na história da nuvem porque:",
+      "options": [
+        "Definiu oficialmente as cinco características essenciais, três modelos de serviço e quatro modelos de implantação da computação em nuvem",
+        "Criou o primeiro padrão de segurança exclusivo para containers",
+        "Proibiu o uso de nuvem pública em órgãos governamentais",
+        "Lançou o primeiro certificado obrigatório de arquitetos de nuvem"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Qual marco histórico está associado à popularização do conceito de \"utility computing\" e à visão de computação como serviço sob demanda, influenciando fortemente a ideia moderna de nuvem?",
+      "options": [
+        "A criação da linguagem Java em 1995",
+        "As ideias e experimentos de John McCarthy nos anos 1960 sobre computação como utilidade pública",
+        "O lançamento do Windows 95",
+        "A invenção do microprocessador pela Intel em 1971"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "No modelo de serviço IaaS (Infrastructure as a Service), o provedor oferece principalmente:",
+      "options": [
+        "Aplicações completas prontas para o usuário final",
+        "Recursos de infraestrutura sob demanda (máquinas virtuais, armazenamento, redes), cabendo ao cliente gerenciar o sistema operacional e as aplicações",
+        "Apenas o ambiente de desenvolvimento e runtime, sem acesso à infraestrutura",
+        "Somente serviços de banco de dados gerenciados"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual modelo de serviço de nuvem abstrai a infraestrutura e o sistema operacional, permitindo que o desenvolvedor foque no código da aplicação e em sua configuração?",
+      "options": [
+        "IaaS",
+        "PaaS (Platform as a Service)",
+        "SaaS",
+        "FaaS exclusivamente"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "No modelo SaaS (Software as a Service), a responsabilidade do cliente se limita basicamente a:",
+      "options": [
+        "Gerenciar o hipervisor e as máquinas virtuais",
+        "Configurar o sistema operacional e aplicar patches de segurança",
+        "Usar a aplicação e, em alguns casos, gerenciar dados e configurações de usuário",
+        "Provisionar redes e balanceadores de carga"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Qual das opções descreve corretamente uma nuvem pública?",
+      "options": [
+        "Infraestrutura dedicada exclusivamente a uma única organização, localizada em seu próprio datacenter",
+        "Recursos de computação oferecidos por um provedor a múltiplos clientes pela internet, com compartilhamento de infraestrutura",
+        "Combinação de nuvem privada e pública com orquestração entre elas",
+        "Nuvem utilizada apenas por órgãos governamentais de um mesmo país"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Uma nuvem híbrida é caracterizada por:",
+      "options": [
+        "Usar apenas um único provedor de nuvem pública",
+        "Combinar infraestrutura de nuvem privada (ou on-premises) com nuvem pública, permitindo portabilidade e orquestração de cargas de trabalho entre os ambientes",
+        "Ser inacessível pela internet",
+        "Oferecer somente serviços de armazenamento de arquivos"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que diferencia uma estratégia multi-cloud de uma nuvem híbrida?",
+      "options": [
+        "Multi-cloud usa múltiplos provedores de nuvem pública (ou serviços de diferentes provedores); híbrida combina ambientes privados/on-premises com públicos",
+        "Não há qualquer diferença entre os termos",
+        "Multi-cloud exige obrigatoriamente um datacenter próprio",
+        "Híbrida só pode ser usada por empresas de tecnologia"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Qual das características abaixo é considerada essencial pela definição do NIST para a computação em nuvem?",
+      "options": [
+        "Acesso obrigatório apenas por redes privadas corporativas",
+        "Self-service sob demanda, amplo acesso à rede, pool de recursos, elasticidade rápida e serviço mensurável",
+        "Uso exclusivo de hardware dedicado sem virtualização",
+        "Impossibilidade de medição de consumo de recursos"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Em um modelo de responsabilidade compartilhada típico de nuvem pública, quem é geralmente responsável pela segurança física dos datacenters e pela infraestrutura de hipervisor?",
+      "options": [
+        "Sempre o cliente",
+        "O provedor de nuvem",
+        "Uma empresa terceira de auditoria independente",
+        "O fabricante do hardware apenas"
+      ],
+      "correct": 1
+    }
+  ]
+}
