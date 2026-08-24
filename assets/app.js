@@ -12,8 +12,8 @@
     currentQuiz: null,
     currentQuizId: null,
     currentIndex: 0,
-    answers: [],       // index of selected option per question (or null)
-    showFeedback: false
+    answers: [],
+    optionOrders: []   // ordem embaralhada das alternativas por pergunta
   };
 
   // ===== DOM =====
@@ -83,7 +83,7 @@
     }
     return arr;
   }
-
+  
   // ===== LOAD DATA =====
   async function loadMainJson() {
     try {
@@ -172,6 +172,11 @@
       state.answers = new Array(quizData.questions.length).fill(null);
       state.showFeedback = false;
 
+      // Embaralha as alternativas de cada pergunta (uma vez por execução)
+      state.optionOrders = meta.questions.map(q =>
+                      shuffle(q.options.map((_, i) => i))
+      );
+
       setQueryParam('quiz', meta.id);
       renderQuestion();
       showScreen('quiz');
@@ -181,11 +186,14 @@
   }
 
   function renderQuestion() {
+    
     const quiz = state.currentQuiz;
     const idx = state.currentIndex;
     const q = quiz.questions[idx];
     const total = quiz.questions.length;
     const selected = state.answers[idx];
+    const selected = state.answers[idx];          // índice ORIGINAL
+    const order = state.optionOrders[idx];        // ex: [2, 0, 3, 1]
 
     els.quizTitle.textContent = quiz.title;
     els.progressText.textContent = `Pergunta ${idx + 1} de ${total}`;
@@ -195,7 +203,7 @@
 
     els.questionNumber.textContent = `Pergunta ${String(idx + 1).padStart(2, '0')}`;
     els.questionText.textContent = q.question;
-
+    
     const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
     els.optionsList.innerHTML = q.options.map((opt, i) => {
       let cls = 'option-btn';
