@@ -191,7 +191,6 @@
     const idx = state.currentIndex;
     const q = quiz.questions[idx];
     const total = quiz.questions.length;
-    const selected = state.answers[idx];
     const selected = state.answers[idx];          // índice ORIGINAL
     const order = state.optionOrders[idx];        // ex: [2, 0, 3, 1]
 
