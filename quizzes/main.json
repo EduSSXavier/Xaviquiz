@@ -40,12 +40,12 @@
       "difficulty": "Intermediário"
     },
     {
-  	"id": "computacao-nuvem",
-  	"title": "Computação em Nuvem: História e Modelos",
-  	"description": "Principais marcos históricos da computação em nuvem e modelos de serviço e implantação.",
-  	"file": "computacao-nuvem.json",
-  	"icon": "☁️",
-  	"difficulty": "Intermediário"
+  	  "id": "computacao-nuvem",
+  	  "title": "Computação em Nuvem: História e Modelos",
+  	  "description": "Principais marcos históricos da computação em nuvem e modelos de serviço e implantação.",
+  	  "file": "computacao-nuvem.json",
+  	  "icon": "☁️",
+  	  "difficulty": "Intermediário"
     }
   ]
 }
