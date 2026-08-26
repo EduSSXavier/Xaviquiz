@@ -1,0 +1,71 @@
+{
+  "title": "HTML & CSS Essentials",
+  "description": "Perguntas sobre estrutura HTML, seletores CSS, flexbox, grid e responsividade.",
+  "questions": [
+    {
+      "question": "Qual tag HTML5 é semanticamente correta para o conteúdo principal de uma página?",
+      "options": ["&lt;section&gt;", "&lt;main&gt;", "&lt;article&gt;", "&lt;div&gt;"],
+      "correct": 1
+    },
+    {
+      "question": "Qual atributo HTML é usado para vincular uma folha de estilo externa?",
+      "options": ["src", "href", "link", "style"],
+      "correct": 1
+    },
+    {
+      "question": "Qual seletor CSS seleciona todos os elementos <p> dentro de um elemento com a classe 'container'?",
+      "options": [".container p", "#container p", "p.container", ".container > p"],
+      "correct": 0
+    },
+    {
+      "question": "Qual propriedade CSS é usada para criar um layout flexível?",
+      "options": ["display: block", "display: flex", "display: grid", "display: inline"],
+      "correct": 1
+    },
+    {
+      "question": "O que significa a unidade 'rem' em CSS?",
+      "options": [
+        "Relativa ao tamanho da fonte do elemento pai",
+        "Relativa ao tamanho da fonte do elemento raiz (html)",
+        "Pixels absolutos",
+        "Porcentagem da largura da viewport"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual seletor CSS seleciona um elemento com id=\"header\"?",
+      "options": [".header", "#header", "header", "*header"],
+      "correct": 1
+    },
+    {
+      "question": "Qual propriedade controla o espaçamento interno de um elemento?",
+      "options": ["margin", "padding", "border", "gap"],
+      "correct": 1
+    },
+    {
+      "question": "Em CSS Grid, qual propriedade define o número de colunas?",
+      "options": [
+        "grid-template-rows",
+        "grid-template-columns",
+        "grid-auto-flow",
+        "grid-gap"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual media query é comumente usada para dispositivos móveis?",
+      "options": [
+        "@media (min-width: 1200px)",
+        "@media (max-width: 768px)",
+        "@media (orientation: landscape)",
+        "@media print"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual atributo HTML torna um input obrigatório?",
+      "options": ["required", "mandatory", "validate", "must"],
+      "correct": 0
+    }
+  ]
+}

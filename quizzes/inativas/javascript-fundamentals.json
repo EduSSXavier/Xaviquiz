@@ -1,0 +1,56 @@
+{
+  "title": "Fundamentos de JavaScript",
+  "description": "Teste seus conhecimentos básicos sobre variáveis, tipos, funções e estruturas de controle em JavaScript.",
+  "questions": [
+    {
+      "question": "Qual palavra-chave é usada para declarar uma variável que não pode ser reatribuída?",
+      "options": ["var", "let", "const", "static"],
+      "correct": 2
+    },
+    {
+      "question": "Qual é o resultado de typeof null em JavaScript?",
+      "options": ["\"null\"", "\"object\"", "\"undefined\"", "\"number\""],
+      "correct": 1
+    },
+    {
+      "question": "Como se declara uma função anônima atribuída a uma variável?",
+      "options": [
+        "function = () => {}",
+        "const fn = function() {}",
+        "let function() {}",
+        "var => function {}"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual método de array cria um novo array com os resultados de uma função aplicada a cada elemento?",
+      "options": ["forEach()", "filter()", "map()", "reduce()"],
+      "correct": 2
+    },
+    {
+      "question": "O que o operador === verifica?",
+      "options": [
+        "Apenas valor",
+        "Apenas tipo",
+        "Valor e tipo",
+        "Referência de objeto"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Qual estrutura de controle é mais adequada para iterar sobre as propriedades de um objeto?",
+      "options": ["for...of", "for...in", "while", "do...while"],
+      "correct": 1
+    },
+    {
+      "question": "O que retorna Array.isArray([]) ?",
+      "options": ["true", "false", "undefined", "null"],
+      "correct": 0
+    },
+    {
+      "question": "Como se acessa o último elemento de um array chamado arr?",
+      "options": ["arr[arr.length]", "arr[arr.length - 1]", "arr.last()", "arr[-1]"],
+      "correct": 1
+    }
+  ]
+}

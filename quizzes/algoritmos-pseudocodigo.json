@@ -1,0 +1,126 @@
+{
+  "title": "Introdução a Algoritmos e Pseudocódigo",
+  "description": "Conceitos fundamentais de algoritmos, estrutura de pseudocódigo, variáveis, estruturas de controle e boas práticas de construção de soluções.",
+  "questions": [
+    {
+      "question": "O que é um algoritmo?",
+      "options": [
+        "Um programa escrito em uma linguagem de programação específica",
+        "Uma sequência finita e ordenada de passos para resolver um problema",
+        "Um tipo de variável usada em computação",
+        "Um erro que ocorre durante a execução de um programa"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é a principal vantagem de usar pseudocódigo?",
+      "options": [
+        "Ele pode ser executado diretamente pelo processador",
+        "Permite descrever a lógica da solução de forma independente de linguagem de programação",
+        "Substitui completamente o uso de fluxogramas",
+        "Garante que o algoritmo seja o mais rápido possível"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Quais são as três estruturas básicas de controle em algoritmos?",
+      "options": [
+        "Sequência, seleção (decisão) e repetição (laço)",
+        "Entrada, processamento e saída",
+        "Variável, constante e função",
+        "Linear, binária e recursiva"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Em pseudocódigo, o comando \"SE ... ENTÃO ... SENÃO ... FIMSE\" representa qual estrutura?",
+      "options": [
+        "Estrutura de repetição",
+        "Estrutura de sequência",
+        "Estrutura de seleção (decisão)",
+        "Estrutura de declaração de variáveis"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O que significa a expressão \"ENQUANTO condição FAÇA\" em pseudocódigo?",
+      "options": [
+        "Executa o bloco uma única vez se a condição for verdadeira",
+        "Repete o bloco enquanto a condição for verdadeira",
+        "Repete o bloco um número fixo de vezes",
+        "Interrompe imediatamente a execução do algoritmo"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual a diferença entre os laços \"PARA\" e \"ENQUANTO\"?",
+      "options": [
+        "Não há diferença; são apenas nomes diferentes para a mesma estrutura",
+        "O \"PARA\" é usado quando se conhece o número de repetições; o \"ENQUANTO\" depende de uma condição",
+        "O \"ENQUANTO\" só pode ser usado com números inteiros",
+        "O \"PARA\" nunca verifica condição de parada"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Em um algoritmo, o que é uma variável?",
+      "options": [
+        "Um valor que nunca muda durante a execução",
+        "Um espaço nomeado na memória usado para armazenar dados que podem variar",
+        "Uma instrução de entrada de dados",
+        "Um tipo especial de laço de repetição"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual das opções abaixo representa corretamente a estrutura de um algoritmo simples em pseudocódigo?",
+      "options": [
+        "INÍCIO → Declarações → Processamento → Saída → FIM",
+        "Compilar → Executar → Depurar → Finalizar",
+        "HTML → CSS → JavaScript → Banco de dados",
+        "Entrada → Interface gráfica → Saída"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O que é um fluxograma no contexto de algoritmos?",
+      "options": [
+        "Um diagrama que representa visualmente os passos de um algoritmo usando símbolos padronizados",
+        "Um tipo de pseudocódigo escrito apenas com setas",
+        "Um relatório de erros do algoritmo",
+        "Uma tabela de variáveis utilizadas no programa"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Qual símbolo de fluxograma é tradicionalmente usado para representar uma decisão (condição)?",
+      "options": [
+        "Retângulo",
+        "Losango (ou diamante)",
+        "Círculo",
+        "Paralelogramo"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que caracteriza um algoritmo bem construído?",
+      "options": [
+        "Ser o mais longo possível para cobrir todos os casos",
+        "Ser finito, preciso, eficaz e produzir o resultado esperado",
+        "Utilizar apenas estruturas de repetição",
+        "Não precisar de dados de entrada"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Em pseudocódigo, o comando \"LEIA x\" geralmente significa:",
+      "options": [
+        "Exibir o valor da variável x na tela",
+        "Atribuir um valor fixo à variável x",
+        "Receber um valor digitado pelo usuário e armazená-lo na variável x",
+        "Apagar o conteúdo da variável x"
+      ],
+      "correct": 2
+    }
+  ]
+}

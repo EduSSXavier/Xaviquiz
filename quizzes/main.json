@@ -1,0 +1,35 @@
+{
+  "quizzes": [
+    {
+      "id": "futurismo-tech",
+      "title": "Tecnologia & Futuro",
+      "description": "Perguntas sobre IA, computação quântica, blockchain e tendências tecnológicas.",
+      "file": "futurismo-tech.json",
+      "icon": "🚀",
+      "difficulty": "Intermediário"
+    },
+    {
+	  "id": "historia-ia",
+	  "title": "História, Arquiteturas e Impacto da IA",
+	  "file": "historia-ia.json",
+	  "icon": "🤖",
+	  "difficulty": "Intermediário"
+     },
+    {
+  	"id": "computacao-nuvem",
+  	"title": "Computação em Nuvem: História e Modelos",
+  	"description": "Principais marcos históricos da computação em nuvem e modelos de serviço e implantação.",
+  	"file": "computacao-nuvem.json",
+  	"icon": "☁️",
+  	"difficulty": "Intermediário"
+    },
+    {
+  	"id": "algoritmos-pseudocodigo",
+  	"title": "Algoritmos e Pseudocódigos",
+  	"description": "Conhecimentos básicos sobre algoritmos e pseudocódigos.",
+  	"file": "algoritmos-pseudocodigo.json",
+  	"icon": "☁️",
+  	"difficulty": "Iniciante"
+    }
+  ]
+}

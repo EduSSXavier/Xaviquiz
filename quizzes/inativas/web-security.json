@@ -1,0 +1,71 @@
+{
+  "title": "Segurança Web Básica",
+  "description": "Conceitos fundamentais de XSS, CSRF, HTTPS, autenticação e boas práticas de segurança.",
+  "questions": [
+    {
+      "question": "O que significa a sigla XSS?",
+      "options": [
+        "Cross-Site Scripting",
+        "Extra Secure Socket",
+        "XML Security Standard",
+        "Cross-Server Security"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Qual protocolo deve ser usado para transmitir dados sensíveis na web?",
+      "options": ["HTTP", "FTP", "HTTPS", "SMTP"],
+      "correct": 2
+    },
+    {
+      "question": "O que é CSRF?",
+      "options": [
+        "Cross-Site Request Forgery",
+        "Client-Side Resource Filter",
+        "Cascading Style Request Format",
+        "Cross-Server Resource Fetch"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Qual prática ajuda a prevenir ataques de injeção de SQL?",
+      "options": [
+        "Usar concatenação de strings para queries",
+        "Usar prepared statements / parametrização",
+        "Desabilitar HTTPS",
+        "Armazenar senhas em texto puro"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que o atributo HttpOnly em cookies ajuda a prevenir?",
+      "options": [
+        "Acesso via JavaScript (XSS)",
+        "Requisições CSRF",
+        "Man-in-the-middle",
+        "Phishing"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Qual cabeçalho HTTP ajuda a prevenir clickjacking?",
+      "options": [
+        "X-Content-Type-Options",
+        "X-Frame-Options",
+        "Content-Security-Policy",
+        "Strict-Transport-Security"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é a melhor forma de armazenar senhas no servidor?",
+      "options": [
+        "Texto puro",
+        "Hash com MD5",
+        "Hash com bcrypt/scrypt/Argon2 + salt",
+        "Criptografia simétrica reversível"
+      ],
+      "correct": 2
+    }
+  ]
+}
