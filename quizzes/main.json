@@ -30,6 +30,13 @@
   	"file": "algoritmos-pseudocodigo.json",
   	"icon": "☁️",
   	"difficulty": "Iniciante"
-    }
+    },
+	{
+	  "id": "blockchain-basico",
+	  "title": "Blockchain: Conceitos, Funcionamento e Segurança",
+	  "file": "blockchain-basico.json",
+	  "icon": "⛓️",
+	  "difficulty": "Intermediário"
+	}
   ]
 }
