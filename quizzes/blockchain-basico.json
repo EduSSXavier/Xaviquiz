@@ -1,0 +1,126 @@
+{
+  "title": "Blockchain: Conceitos, Funcionamento, Aplicações e Segurança",
+  "description": "Conceitos básicos de blockchain, características de funcionamento, principais aplicações da tecnologia e aspectos de segurança. Nível intermediário.",
+  "questions": [
+    {
+      "question": "O que é, em essência, uma blockchain?",
+      "options": [
+        "Um banco de dados centralizado controlado por uma única empresa",
+        "Uma estrutura de dados distribuída formada por blocos encadeados criptograficamente, mantida por uma rede de participantes",
+        "Um tipo de linguagem de programação para contratos inteligentes",
+        "Um protocolo exclusivo de transferência de arquivos peer-to-peer"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual mecanismo garante que os blocos de uma blockchain permaneçam ligados de forma que a alteração de um bloco anterior seja facilmente detectável?",
+      "options": [
+        "O uso exclusivo de senhas de administrador",
+        "O hash criptográfico do bloco anterior incluído no cabeçalho do bloco seguinte",
+        "A criptografia simétrica AES aplicada a todo o banco de dados",
+        "A autenticação biométrica de todos os nós da rede"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que é um \"bloco\" em uma blockchain típica (como a do Bitcoin)?",
+      "options": [
+        "Apenas uma lista de endereços de carteiras",
+        "Uma estrutura que contém um conjunto de transações, um carimbo de tempo, o hash do bloco anterior e outros metadados",
+        "Um arquivo de configuração do nó validador",
+        "Uma chave privada compartilhada entre todos os participantes"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual característica fundamental da blockchain dificulta a alteração retroativa de dados já registrados e confirmados?",
+      "options": [
+        "Centralização do armazenamento em um único servidor",
+        "Imutabilidade (ou resistência à adulteração) proporcionada pelo encadeamento de hashes e pelo consenso da rede",
+        "A ausência total de criptografia",
+        "O fato de os dados serem apagados automaticamente a cada 24 horas"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que é consenso em uma rede blockchain?",
+      "options": [
+        "A obrigação de todos os usuários terem a mesma chave privada",
+        "O processo pelo qual os nós da rede chegam a um acordo sobre o estado válido do ledger (quais blocos/transações são aceitos)",
+        "A votação política entre desenvolvedores do protocolo",
+        "A sincronização automática de relógios entre todos os dispositivos"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é a principal diferença conceitual entre Proof of Work (PoW) e Proof of Stake (PoS)?",
+      "options": [
+        "PoW não usa criptografia; PoS usa apenas senhas",
+        "PoW exige trabalho computacional (mineração) para propor blocos; PoS seleciona validadores com base em participação/stake de criptomoeda",
+        "PoS só funciona em blockchains privadas; PoW só em públicas",
+        "Não há diferença prática entre os dois mecanismos"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que são contratos inteligentes (smart contracts)?",
+      "options": [
+        "Contratos jurídicos tradicionais digitalizados em PDF",
+        "Programas autoexecutáveis armazenados na blockchain que executam lógica pré-definida quando condições são atendidas",
+        "Acordos verbais entre mineradores",
+        "APIs externas que a blockchain consulta a cada bloco"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual das opções é uma aplicação típica e consolidada da tecnologia blockchain além de criptomoedas?",
+      "options": [
+        "Substituição completa de todos os sistemas operacionais desktop",
+        "Rastreabilidade de cadeias de suprimentos, registros de procedência e tokenização de ativos",
+        "Exclusivamente o armazenamento de fotos pessoais em alta resolução",
+        "O funcionamento obrigatório de redes Wi-Fi domésticas"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Em termos de permissão de acesso, como se classificam as blockchains públicas e as privadas (permissionadas)?",
+      "options": [
+        "Públicas: qualquer um pode participar e validar; privadas/permissionadas: participação e validação restritas a entidades autorizadas",
+        "Públicas só existem em teoria; todas as blockchains reais são privadas",
+        "Privadas permitem anonimato total; públicas exigem documento de identidade",
+        "Não há diferença: ambas exigem convite de um administrador central"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Por que a chave privada é crítica para a segurança do usuário em uma blockchain de criptomoedas?",
+      "options": [
+        "Porque ela é publicada em todos os blocos da rede",
+        "Porque quem possui a chave privada controla os ativos associados ao endereço correspondente; sua perda ou vazamento pode significar perda irreversível de fundos",
+        "Porque ela substitui a necessidade de senhas em sites comuns",
+        "Porque o protocolo a renova automaticamente a cada transação"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que é um ataque de 51% em uma blockchain que usa Proof of Work?",
+      "options": [
+        "Quando 51% dos usuários deixam de usar a rede",
+        "Quando uma entidade controla a maior parte do poder de hash da rede e pode, em teoria, reorganizar blocos recentes ou censurar transações",
+        "Quando o preço da criptomoeda cai 51% em um dia",
+        "Quando 51% dos nós desligam seus computadores ao mesmo tempo por falha elétrica"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual prática aumenta a segurança do usuário ao interagir com aplicações blockchain (por exemplo, carteiras e DeFi)?",
+      "options": [
+        "Compartilhar a frase de recuperação (seed phrase) com o suporte técnico de qualquer site",
+        "Verificar endereços de contratos, usar carteiras confiáveis, habilitar autenticação quando disponível e nunca expor a chave privada ou seed phrase",
+        "Usar sempre a mesma senha curta em todos os serviços",
+        "Desativar qualquer forma de verificação em duas etapas"
+      ],
+      "correct": 1
+    }
+  ]
+}
