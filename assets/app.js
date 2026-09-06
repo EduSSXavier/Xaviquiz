@@ -1,6 +1,7 @@
 /**
  * NeonQuiz - Sistema de Quizzes Futurista
- * GitHub Pages ready · HTML + Vanilla JS
+ * Versão com fetch (quizzes/*.json + main.json)
+ * A cada execução: ordem das questões e das alternativas é aleatória.
  */
 
 (function () {
@@ -9,16 +10,14 @@
   // ===== STATE =====
   const state = {
     quizzesMeta: [],
-    currentQuiz: null,
+    currentQuiz: null,       // quiz já preparado (embaralhado)
     currentQuizId: null,
     currentIndex: 0,
-    answers: [],       // index of selected option per question (or null)
-    showFeedback: false
+    answers: []              // índice da opção na ordem EXIBIDA (após shuffle)
   };
 
   // ===== DOM =====
   const $ = (sel) => document.querySelector(sel);
-  const $$ = (sel) => document.querySelectorAll(sel);
 
   const screens = {
     home: $('#home-screen'),
@@ -61,20 +60,30 @@
   }
 
   function getQueryParam(key) {
-    const params = new URLSearchParams(window.location.search);
-    return params.get(key);
+    try {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(key);
+    } catch {
+      const match = window.location.href.match(new RegExp('[?&]' + key + '=([^&#]*)'));
+      return match ? decodeURIComponent(match[1]) : null;
+    }
   }
 
   function setQueryParam(key, value) {
-    const url = new URL(window.location);
-    if (value) {
-      url.searchParams.set(key, value);
-    } else {
-      url.searchParams.delete(key);
+    try {
+      const url = new URL(window.location.href);
+      if (value) {
+        url.searchParams.set(key, value);
+      } else {
+        url.searchParams.delete(key);
+      }
+      history.replaceState(null, '', url.toString());
+    } catch {
+      // ambientes restritos — ignora
     }
-    history.replaceState(null, '', url);
   }
 
+  /** Fisher–Yates shuffle (retorna novo array) */
   function shuffle(array) {
     const arr = [...array];
     for (let i = arr.length - 1; i > 0; i--) {
@@ -84,33 +93,58 @@
     return arr;
   }
 
-  // ===== LOAD DATA =====
-  async function loadMainJson() {
-    try {
-      const res = await fetch('quizzes/main.json');
-      if (!res.ok) throw new Error('Falha ao carregar lista de quizzes');
-      const data = await res.json();
-      state.quizzesMeta = data.quizzes || [];
-      return state.quizzesMeta;
-    } catch (err) {
-      console.error(err);
-      throw err;
-    }
+  /**
+   * Prepara o quiz para uma execução:
+   * - embaralha a ordem das questões
+   * - embaralha as alternativas de cada questão
+   * - recalcula o índice `correct` para a nova ordem das opções
+   */
+  function prepareQuiz(rawQuiz) {
+    const shuffledQuestions = shuffle(rawQuiz.questions).map((q) => {
+      const indexed = q.options.map((text, originalIndex) => ({
+        text,
+        originalIndex
+      }));
+      const shuffledOpts = shuffle(indexed);
+      const options = shuffledOpts.map((o) => o.text);
+      const correct = shuffledOpts.findIndex(
+        (o) => o.originalIndex === q.correct
+      );
+      return {
+        question: q.question,
+        options,
+        correct
+      };
+    });
+
+    return {
+      title: rawQuiz.title,
+      description: rawQuiz.description || '',
+      questions: shuffledQuestions
+    };
   }
 
-  async function loadQuiz(file) {
-    try {
-      const res = await fetch(`quizzes/${file}`);
-      if (!res.ok) throw new Error(`Quiz "${file}" não encontrado`);
-      const data = await res.json();
-      if (!data.questions || !Array.isArray(data.questions) || data.questions.length === 0) {
-        throw new Error('Quiz sem questões válidas');
-      }
-      return data;
-    } catch (err) {
-      console.error(err);
-      throw err;
+  // ===== DATA (fetch) =====
+  async function loadMainJson() {
+    const res = await fetch('quizzes/main.json');
+    if (!res.ok) throw new Error('Falha ao carregar a lista de quizzes (main.json).');
+    const data = await res.json();
+    state.quizzesMeta = data.quizzes || [];
+    return state.quizzesMeta;
+  }
+
+  async function loadQuizFile(file) {
+    const res = await fetch(`quizzes/${file}`);
+    if (!res.ok) throw new Error(`Quiz "${file}" não encontrado.`);
+    const data = await res.json();
+    if (!data.questions || !Array.isArray(data.questions) || data.questions.length === 0) {
+      throw new Error('Quiz sem questões válidas.');
     }
+    return data;
+  }
+
+  function getMetaById(id) {
+    return state.quizzesMeta.find((q) => q.id === id) || null;
   }
 
   // ===== HOME =====
@@ -123,7 +157,9 @@
       return;
     }
 
-    els.quizList.innerHTML = state.quizzesMeta.map(q => `
+    els.quizList.innerHTML = state.quizzesMeta
+      .map(
+        (q) => `
       <article class="quiz-card" tabindex="0" role="button" data-id="${q.id}" data-file="${q.file}" aria-label="Iniciar quiz: ${q.title}">
         <span class="quiz-card-icon">${q.icon || '📘'}</span>
         <h3 class="quiz-card-title">${q.title}</h3>
@@ -131,10 +167,11 @@
         <div class="quiz-card-meta">
           <span class="difficulty">${q.difficulty || 'Geral'}</span>
         </div>
-      </article>
-    `).join('');
+      </article>`
+      )
+      .join('');
 
-    els.quizList.querySelectorAll('.quiz-card').forEach(card => {
+    els.quizList.querySelectorAll('.quiz-card').forEach((card) => {
       card.addEventListener('click', () => startQuizById(card.dataset.id));
       card.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -147,35 +184,36 @@
 
   // ===== QUIZ FLOW =====
   async function startQuizById(id) {
-    const meta = state.quizzesMeta.find(q => q.id === id);
+    const meta = getMetaById(id);
     if (!meta) {
       showError(`Quiz com id "${id}" não encontrado.`);
       return;
     }
-    await startQuiz(meta);
+    await startQuizFromMeta(meta);
   }
 
-  async function startQuiz(meta) {
+  async function startQuizFromMeta(meta) {
     try {
-      showScreen('home'); // keep current while loading
       els.quizList.innerHTML = `
         <div class="loading">
           <div class="spinner"></div>
           <p>Carregando quiz...</p>
         </div>`;
+      showScreen('home');
 
-      const quizData = await loadQuiz(meta.file);
+      const raw = await loadQuizFile(meta.file);
+      const prepared = prepareQuiz(raw);
 
-      state.currentQuiz = quizData;
+      state.currentQuiz = prepared;
       state.currentQuizId = meta.id;
       state.currentIndex = 0;
-      state.answers = new Array(quizData.questions.length).fill(null);
-      state.showFeedback = false;
+      state.answers = new Array(prepared.questions.length).fill(null);
 
       setQueryParam('quiz', meta.id);
       renderQuestion();
       showScreen('quiz');
     } catch (err) {
+      console.error(err);
       showError(err.message || 'Erro ao carregar o quiz.');
     }
   }
@@ -189,7 +227,7 @@
 
     els.quizTitle.textContent = quiz.title;
     els.progressText.textContent = `Pergunta ${idx + 1} de ${total}`;
-    const percent = Math.round(((idx) / total) * 100);
+    const percent = Math.round((idx / total) * 100);
     els.progressPercent.textContent = `${percent}%`;
     els.progressFill.style.width = `${percent}%`;
 
@@ -197,24 +235,26 @@
     els.questionText.textContent = q.question;
 
     const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
-    els.optionsList.innerHTML = q.options.map((opt, i) => {
-      let cls = 'option-btn';
-      if (selected === i) cls += ' selected';
-      return `
-        <button class="${cls}" data-index="${i}" ${selected !== null ? 'disabled' : ''}>
-          <span class="option-letter">${letters[i] || (i + 1)}</span>
+    els.optionsList.innerHTML = q.options
+      .map((opt, i) => {
+        let cls = 'option-btn';
+        if (selected === i) cls += ' selected';
+        return `
+        <button type="button" class="${cls}" data-index="${i}" ${selected !== null ? 'disabled' : ''}>
+          <span class="option-letter">${letters[i] || i + 1}</span>
           <span class="option-text">${opt}</span>
         </button>`;
-    }).join('');
+      })
+      .join('');
 
-    // Attach option listeners only if not yet answered
     if (selected === null) {
-      els.optionsList.querySelectorAll('.option-btn').forEach(btn => {
-        btn.addEventListener('click', () => selectOption(parseInt(btn.dataset.index, 10)));
+      els.optionsList.querySelectorAll('.option-btn').forEach((btn) => {
+        btn.addEventListener('click', () =>
+          selectOption(parseInt(btn.dataset.index, 10))
+        );
       });
     }
 
-    // Buttons state
     els.btnPrev.disabled = idx === 0;
     const isLast = idx === total - 1;
     const hasAnswer = selected !== null;
@@ -229,10 +269,9 @@
   }
 
   function selectOption(optionIndex) {
-    if (state.answers[state.currentIndex] !== null) return; // already answered
-
+    if (state.answers[state.currentIndex] !== null) return;
     state.answers[state.currentIndex] = optionIndex;
-    renderQuestion(); // re-render to show selection & enable next
+    renderQuestion();
   }
 
   function goNext() {
@@ -241,7 +280,6 @@
       state.currentIndex++;
       renderQuestion();
     } else {
-      // last question → results
       showResults();
     }
   }
@@ -257,13 +295,13 @@
   function showResults() {
     const quiz = state.currentQuiz;
     const total = quiz.questions.length;
-    let correct = 0;
+    let correctCount = 0;
     const wrongs = [];
 
     quiz.questions.forEach((q, i) => {
       const userAns = state.answers[i];
       if (userAns === q.correct) {
-        correct++;
+        correctCount++;
       } else {
         wrongs.push({
           question: q.question,
@@ -273,10 +311,9 @@
       }
     });
 
-    const incorrect = total - correct;
-    const percent = Math.round((correct / total) * 100);
+    const incorrect = total - correctCount;
+    const percent = Math.round((correctCount / total) * 100);
 
-    // Icon & message
     let icon = '🏆';
     let title = 'Excelente!';
     let message = 'Você dominou o assunto.';
@@ -303,35 +340,36 @@
     els.resultsTitle.textContent = title;
     els.resultsScore.textContent = `${percent}%`;
     els.resultsMessage.textContent = message;
-    els.statCorrect.textContent = correct;
+    els.statCorrect.textContent = correctCount;
     els.statIncorrect.textContent = incorrect;
 
-    // Review section
     if (wrongs.length > 0) {
       els.reviewSection.style.display = 'block';
-      els.reviewList.innerHTML = wrongs.map(w => `
+      els.reviewList.innerHTML = wrongs
+        .map(
+          (w) => `
         <div class="review-item">
           <p class="q-text">${w.question}</p>
           <p class="your-answer">Sua resposta: ${w.userAnswer}</p>
           <p class="correct-answer">Resposta correta: ${w.correctAnswer}</p>
-        </div>
-      `).join('');
+        </div>`
+        )
+        .join('');
     } else {
       els.reviewSection.style.display = 'none';
       els.reviewList.innerHTML = '';
     }
 
-    // Final progress
     els.progressFill.style.width = '100%';
     els.progressPercent.textContent = '100%';
 
     showScreen('results');
   }
 
-  function retryQuiz() {
+  async function retryQuiz() {
     if (!state.currentQuizId) return;
-    const meta = state.quizzesMeta.find(q => q.id === state.currentQuizId);
-    if (meta) startQuiz(meta);
+    const meta = getMetaById(state.currentQuizId);
+    if (meta) await startQuizFromMeta(meta);
   }
 
   function goHome() {
@@ -353,14 +391,12 @@
   async function init() {
     els.year.textContent = new Date().getFullYear();
 
-    // Event listeners
     els.btnNext.addEventListener('click', goNext);
     els.btnPrev.addEventListener('click', goPrev);
     els.btnRetry.addEventListener('click', retryQuiz);
     els.btnHome.addEventListener('click', goHome);
     els.btnErrorHome.addEventListener('click', goHome);
 
-    // Keyboard navigation during quiz
     document.addEventListener('keydown', (e) => {
       if (!screens.quiz.classList.contains('active')) return;
       if (e.key === 'ArrowRight' || e.key === 'Enter') {
@@ -374,17 +410,19 @@
       await loadMainJson();
       renderQuizList();
 
-      // Direct access via ?quiz=id
       const quizParam = getQueryParam('quiz');
       if (quizParam) {
         await startQuizById(quizParam);
       }
     } catch (err) {
-      showError('Não foi possível carregar a lista de quizzes. Verifique se o arquivo quizzes/main.json existe.');
+      console.error(err);
+      showError(
+        err.message ||
+          'Não foi possível carregar a lista de quizzes. Verifique quizzes/main.json e use um servidor local.'
+      );
     }
   }
 
-  // Start
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
