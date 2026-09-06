@@ -1,0 +1,126 @@
+{
+  "title": "Python: Condicionais e Loops",
+  "description": "Estruturas condicionais (if/elif/else), operadores de comparação e lógicos, e laços de repetição (for, while, range, break, continue) em Python. Nível intermediário.",
+  "questions": [
+    {
+      "question": "Qual é a forma correta de escrever uma estrutura condicional simples em Python?",
+      "options": [
+        "if (x > 10) { print(x) }",
+        "if x > 10:\n    print(x)",
+        "if x > 10 then print(x)",
+        "if x > 10 do print(x)"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que o bloco elif permite em uma estrutura condicional Python?",
+      "options": [
+        "Encerrar o programa imediatamente",
+        "Testar uma nova condição somente se as anteriores forem falsas",
+        "Repetir o mesmo bloco de código várias vezes",
+        "Definir uma variável global"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é o resultado da expressão Python: 5 <= 5 and 3 != 2 ?",
+      "options": [
+        "False",
+        "True",
+        "None",
+        "Erro de sintaxe"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Em Python, qual operador lógico retorna True apenas quando as duas condições são verdadeiras?",
+      "options": [
+        "or",
+        "not",
+        "and",
+        "xor"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Qual laço é mais indicado quando se conhece de antemão a sequência (ou o número de iterações) a percorrer?",
+      "options": [
+        "while True",
+        "for",
+        "do-while (nativo do Python)",
+        "goto"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que a função range(3) gera em um for (em termos de valores produzidos)?",
+      "options": [
+        "1, 2, 3",
+        "0, 1, 2",
+        "0, 1, 2, 3",
+        "3, 2, 1"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é a saída do código abaixo?\n\nx = 0\nwhile x < 3:\n    print(x)\n    x += 1",
+      "options": [
+        "0 1 2 3",
+        "1 2 3",
+        "0 1 2",
+        "Loop infinito"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Para que serve a instrução break dentro de um loop em Python?",
+      "options": [
+        "Pular apenas a iteração atual e continuar o loop",
+        "Encerrar imediatamente o loop mais interno",
+        "Reiniciar o loop do início",
+        "Converter o loop em uma função"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Para que serve a instrução continue dentro de um loop em Python?",
+      "options": [
+        "Encerrar o programa",
+        "Pular o restante do corpo do loop na iteração atual e ir para a próxima",
+        "Criar uma cópia da variável de controle",
+        "Sair de todos os loops aninhados de uma vez"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é a forma idiomática de percorrer os elementos de uma lista chamada itens em Python?",
+      "options": [
+        "for i in range(itens):",
+        "for item in itens:",
+        "foreach item in itens:",
+        "loop item over itens:"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que ocorre se a condição de um while nunca se tornar falsa e não houver break?",
+      "options": [
+        "O Python gera automaticamente um erro após 1000 iterações",
+        "O loop se encerra sozinho após um segundo",
+        "Ocorre um loop infinito",
+        "O interpretador ignora o while"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Qual é a saída de:\n\nfor i in range(2, 6, 2):\n    print(i)",
+      "options": [
+        "2 3 4 5 6",
+        "2 4",
+        "2 4 6",
+        "0 2 4"
+      ],
+      "correct": 1
+    }
+  ]
+}

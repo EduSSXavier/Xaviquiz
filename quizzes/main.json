@@ -37,6 +37,13 @@
 	  "file": "blockchain-basico.json",
 	  "icon": "⛓️",
 	  "difficulty": "Intermediário"
-	}
+    },
+    {
+	"id": "python-condicionais-loops",
+	"title": "Python: Condicionais e Loops",
+	"file": "python-condicionais-loops.json",
+	"icon": "🐍",
+	"difficulty": "Intermediário"
+    }
   ]
 }
