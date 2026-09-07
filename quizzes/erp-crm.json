@@ -1,0 +1,126 @@
+{
+  "title": "ERP, CRM e sua Interligação",
+  "description": "Conceitos básicos de ERP (Enterprise Resource Planning), CRM (Customer Relationship Management) e como esses sistemas se complementam nas organizações.",
+  "questions": [
+    {
+      "question": "O que significa a sigla ERP?",
+      "options": [
+        "Electronic Resource Protocol",
+        "Enterprise Resource Planning",
+        "External Reporting Platform",
+        "Employee Records Portal"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é o objetivo principal de um sistema ERP?",
+      "options": [
+        "Gerenciar apenas o relacionamento com clientes e campanhas de marketing",
+        "Integrar e automatizar processos de negócio (finanças, estoque, produção, RH etc.) em uma base de dados centralizada",
+        "Substituir completamente a internet corporativa",
+        "Armazenar somente documentos em PDF"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que significa a sigla CRM?",
+      "options": [
+        "Corporate Resource Management",
+        "Customer Relationship Management",
+        "Central Reporting Module",
+        "Cloud Runtime Manager"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é o foco principal de um sistema CRM?",
+      "options": [
+        "Controlar o chão de fábrica e a lista de materiais (BOM)",
+        "Gerenciar interações, dados e o ciclo de relacionamento com clientes e prospects",
+        "Calcular a folha de pagamento dos funcionários",
+        "Gerenciar exclusivamente o inventário de produtos"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual módulo é tipicamente encontrado em um ERP, e não no núcleo de um CRM?",
+      "options": [
+        "Gestão de oportunidades de venda e pipeline",
+        "Contabilidade, contas a pagar/receber e controle de estoque",
+        "Campanhas de e-mail marketing",
+        "Registro de tickets de atendimento ao cliente"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Em um CRM, o que costuma ser priorizado?",
+      "options": [
+        "Planejamento de capacidade produtiva da fábrica",
+        "Histórico de contatos, preferências do cliente, vendas e suporte",
+        "Conciliação bancária e fechamento contábil",
+        "Roteirização de caminhões de entrega interna"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Como ERP e CRM se interligam de forma complementar?",
+      "options": [
+        "O CRM substitui totalmente o ERP em qualquer empresa",
+        "O CRM cuida do relacionamento e das vendas; o ERP executa e registra os processos operacionais e financeiros gerados por esses pedidos",
+        "Não há qualquer relação entre os dois sistemas",
+        "O ERP só funciona se o CRM estiver desligado"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Quando um pedido é fechado no CRM e enviado ao ERP, o que normalmente acontece a seguir no ERP?",
+      "options": [
+        "O pedido é apagado automaticamente",
+        "O pedido pode gerar reserva de estoque, ordem de produção/faturamento e lançamentos financeiros",
+        "O CRM assume o controle da contabilidade",
+        "Nada: os sistemas nunca trocam dados"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual benefício a integração entre ERP e CRM costuma trazer?",
+      "options": [
+        "Eliminar a necessidade de usuários e senhas",
+        "Visão unificada do cliente (dados comerciais + situação financeira, entregas e estoque)",
+        "Impedir o acesso remoto aos sistemas",
+        "Reduzir a empresa a um único módulo de chat"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Em muitas arquiteturas modernas, como ERP e CRM se comunicam?",
+      "options": [
+        "Apenas por correio impresso",
+        "Por APIs, middlewares ou conectores que sincronizam clientes, pedidos, faturamento e status",
+        "Somente se ambos forem instalados no mesmo computador do usuário",
+        "Por meio de pen drives trocados manualmente todos os dias"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual cenário ilustra melhor o uso combinado de CRM e ERP?",
+      "options": [
+        "O time comercial registra a oportunidade e o pedido no CRM; o ERP processa estoque, emissão de NF e contas a receber",
+        "O ERP envia e-mails de marketing em massa no lugar do CRM",
+        "O CRM calcula a depreciação de ativos fixos da empresa",
+        "Nenhum dos dois sistemas trata de pedidos de venda"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Por que uma empresa pode manter ERP e CRM como sistemas distintos, porém integrados?",
+      "options": [
+        "Porque é proibido por lei usar um único sistema",
+        "Porque cada um é especializado em seu domínio (operações internas vs. relacionamento com o cliente), e a integração evita silos de informação",
+        "Porque o CRM não consegue armazenar nomes de clientes",
+        "Porque o ERP não aceita números de telefone"
+      ],
+      "correct": 1
+    }
+  ]
+}

@@ -44,6 +44,13 @@
 	"file": "python-condicionais-loops.json",
 	"icon": "🐍",
 	"difficulty": "Intermediário"
+    },
+    {
+	"id": "erp-crm",
+	"title": "ERP, CRM e sua Interligação",
+	"file": "erp-crm.json",
+	"icon": "🏢",
+	"difficulty": "Intermediário"
     }
   ]
 }
