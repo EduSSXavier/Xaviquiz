@@ -53,18 +53,11 @@
 	"difficulty": "Intermediário"
     },
     {
-    	"id": "infraestrutura-redes1",
-    	"title": "Infraestrutura Digital: Conceitos Básicos (Intermediário)",
-    	"file": "infraestrutura-redes1.json",
-    	"icon": "🌐",
-    	"difficulty": "Intermediário"
-    },
-    {
-    	"id": "infraestrutura-redes2",
-    	"title": "Infraestrutura Digital: Redes, Internet e Nuvem (Avançado)",
-    	"file": "infraestrutura-redes2.json",
-    	"icon": "🌐",
-    	"difficulty": "Avançado"
+    "id": "infraestrutura-redes2",
+    "title": "Infraestrutura Digital: Redes, Internet e Nuvem (Avançado)",
+    "file": "infraestrutura-redes2.json",
+    "icon": "🌐",
+    "difficulty": "Avançado"
     }
   ]
 }
