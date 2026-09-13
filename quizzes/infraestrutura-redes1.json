@@ -1,0 +1,126 @@
+{
+  "title": "Infraestrutura Digital: Redes, Internet e Nuvem (Avançado)",
+  "description": "Questões avançadas sobre Internet, Intranet, Extranet, topologias, modelo OSI/TCP-IP, equipamentos, DNS/DHCP, computação em nuvem e infraestrutura global, com base em conceitos de infraestrutura digital básica aprofundados.",
+  "questions": [
+    {
+      "question": "A Web (WWW) e a Internet frequentemente são tratadas como sinônimos. Qual afirmação descreve corretamente a relação entre elas?",
+      "options": [
+        "A Internet é apenas o protocolo HTTP; a Web engloba TCP/IP, DNS e FTP",
+        "A Web (HTTP/HTML) é um dos serviços que rodam sobre a Internet, junto com e-mail, FTP e DNS",
+        "Internet e Web são equivalentes desde a ARPANET de 1969",
+        "A Web é a infraestrutura física; a Internet é apenas a interface gráfica"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Em relação a Internet, Intranet e Extranet, qual combinação está correta quanto a escopo de acesso e controle?",
+      "options": [
+        "Internet: restrita à empresa; Intranet: pública global; Extranet: apenas dispositivos IoT",
+        "Internet: acesso público global; Intranet: colaboradores autenticados com firewall/VPN; Extranet: extensão controlada a parceiros/fornecedores",
+        "Intranet e Extranet são nomes comerciais para a mesma rede pública",
+        "Extranet elimina a necessidade de autenticação e certificados"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "No modelo OSI, em quais camadas atuam tipicamente um switch Ethernet e um roteador IP, respectivamente?",
+      "options": [
+        "Switch na camada 3 (Rede) e roteador na camada 2 (Enlace)",
+        "Switch na camada 2 (Enlace de Dados) e roteador na camada 3 (Rede)",
+        "Ambos exclusivamente na camada 1 (Física)",
+        "Switch na camada 7 (Aplicação) e roteador na camada 4 (Transporte)"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é a responsabilidade principal da camada de Transporte no modelo OSI, e quais protocolos a exemplificam?",
+      "options": [
+        "Endereçamento MAC e detecção de erros — Ethernet e Wi-Fi",
+        "Controle de fluxo, segmentação e confiabilidade — TCP, UDP e SCTP",
+        "Tradução e criptografia de dados — apenas JPEG e ASCII",
+        "Roteamento entre sistemas autônomos — somente BGP"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Comparando as topologias estrela (star) e anel (ring), qual análise de risco está mais alinhada às características clássicas de cada uma?",
+      "options": [
+        "Na estrela, a falha de um host periférico derruba toda a rede; no anel, o switch central é o único ponto de falha",
+        "Na estrela, o switch central é ponto único de falha; no anel, a falha de um nó pode afetar o anel inteiro",
+        "Ambas eliminam qualquer ponto único de falha por definição",
+        "O anel nunca sofre impacto se um nó falhar, ao contrário da malha"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Por que a topologia em malha (mesh) oferece alta tolerância a falhas, e qual é seu principal custo associado?",
+      "options": [
+        "Porque usa um único barramento compartilhado — custo baixo de cabeamento",
+        "Porque há múltiplos caminhos redundantes entre nós — custo elevado de cabos/links",
+        "Porque depende exclusivamente de um roteador central — custo zero de enlaces",
+        "Porque não utiliza endereçamento lógico — custo apenas de software"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "DNS e DHCP desempenham papéis distintos na rede. Qual descrição está correta?",
+      "options": [
+        "DNS atribui endereços IP automaticamente; DHCP traduz nomes como google.com em endereços IP",
+        "DNS traduz nomes de domínio em endereços IP; DHCP atribui endereços IP automaticamente aos hosts na rede",
+        "Ambos operam apenas na camada Física do modelo OSI",
+        "DHCP substitui completamente o BGP na Internet pública"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "No modelo de serviço em nuvem, qual fronteira de responsabilidade distingue corretamente IaaS de PaaS?",
+      "options": [
+        "Em IaaS o cliente gerencia VMs, SO e aplicações; em PaaS o provedor abstrai infraestrutura e SO, e o cliente foca no código/deploy",
+        "Em PaaS o cliente administra o hipervisor; em IaaS só usa aplicações prontas como Gmail",
+        "IaaS e PaaS são idênticos: ambos entregam apenas software pronto ao usuário final",
+        "SaaS exige que o cliente configure redes virtuais e balanceadores manualmente"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Em uma arquitetura típica de aplicação na nuvem (usuário → edge → origem), qual é o papel combinado de CDN/Edge e Load Balancer?",
+      "options": [
+        "CDN armazena apenas backups offline; o load balancer substitui o banco de dados",
+        "CDN/Edge reduz latência com cache geolocalizado; o load balancer distribui requisições entre servidores de aplicação",
+        "Ambos operam somente na camada de apresentação do OSI e não afetam disponibilidade",
+        "O load balancer traduz nomes DNS; a CDN atribui IPs via DHCP"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Sobre a infraestrutura física global da Internet, qual afirmação é consistente com o papel dos cabos submarinos e dos IXPs?",
+      "options": [
+        "Cabos submarinos transportam parcela residual do tráfego; IXPs existem apenas para redes domésticas Wi-Fi",
+        "Cabos submarinos transportam a maior parte do tráfego internacional; IXPs (como o PTT-SP) concentram troca de tráfego entre redes, reduzindo custo e latência",
+        "IXPs substituem totalmente os cabos submarinos no roteamento intercontinental",
+        "O tráfego internacional depende exclusivamente de enlaces satelitais geoestacionários"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O Border Gateway Protocol (BGP) é frequentemente chamado de espinha dorsal da Internet. Qual é sua função essencial?",
+      "options": [
+        "Atribuir endereços MAC a placas de rede em LANs domésticas",
+        "Rotear pacotes entre os milhares de Sistemas Autônomos (AS) que compõem a Internet",
+        "Compactar imagens JPEG na camada de Apresentação",
+        "Substituir o TCP em conexões que exigem confiabilidade"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Anycast (como no DNS 1.1.1.1 da Cloudflare) e o uso de CDN pelo YouTube/Google compartilham qual princípio de otimização?",
+      "options": [
+        "Concentrar todo o tráfego mundial em um único data center central",
+        "Anunciar o mesmo serviço/IP a partir de múltiplos locais para que o cliente alcance o nó topologicamente mais próximo, reduzindo latência",
+        "Eliminar a necessidade de protocolos de transporte como TCP e UDP",
+        "Garantir que cada usuário use obrigatoriamente um endereço IPv4 privado"
+      ],
+      "correct": 1
+    }
+  ]
+}
